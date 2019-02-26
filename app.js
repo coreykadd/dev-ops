@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 // Routes
-app.use('/api', contacts);
+// app.use('/api', contacts);
 
 // Listens server
 app.listen(CONFIG.port);
