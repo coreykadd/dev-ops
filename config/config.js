@@ -2,8 +2,8 @@ CONFIG = {}
 
 CONFIG.port = process.env.PORT || '3000';
 
-CONFIG.db_host = process.env.DB_HOST || 'localhost';
-CONFIG.db_port = process.env.DB_PORT || '27017';
+// CONFIG.db_host = process.env.DB_HOST || 'localhost';
+// CONFIG.db_port = process.env.DB_PORT || '27017';
 
 CONFIG.RDS_HOSTNAME = process.env.RDS_HOSTNAME || 'contactlistdb.cwwnavucu4nf.eu-west-1.rds.amazonaws.com';
 CONFIG.RDS_DATABASE = process.env.RDS_DATABASE || 'contacts';
