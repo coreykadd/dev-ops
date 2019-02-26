@@ -1,4 +1,4 @@
-require('./config/config'); //Init config variables
+// require('./config/config'); //Init config variables
 
 // Variables
 var express = require('express');
