@@ -1,13 +1,13 @@
-require('./config/config'); //Init config variables
+// require('./config/config'); //Init config variables
 
 const mysql = require('mysql');
 
 var connection = mysql.createConnection({
-    host     : CONFIG.RDS_HOSTNAME,
-    database : CONFIG.RDS_DATABASE,
-    user     : CONFIG.RDS_USERNAME,
-    password : CONFIG.RDS_PASSWORD,
-    port     : CONFIG.RDS_PORT
+    host     : process.env.RDS_HOSTNAME,
+    database : process.env.RDS_DATABASE,
+    user     : process.env.RDS_USERNAME,
+    password : process.env.RDS_PASSWORD,
+    port     : process.env.RDS_PORT
   });
   
   connection.connect(function(err) {
