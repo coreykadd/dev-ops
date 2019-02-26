@@ -1,4 +1,4 @@
-// require('./config/config'); //Init config variables
+require('./config/config'); //Init config variables
 
 // Variables
 var express = require('express');
@@ -18,5 +18,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 // app.use('/api', contacts);
 
 // Listens server
-app.listen(port);
+app.listen(CONFIG.port, () => {
+    console.log('Listening to port ' + CONFIG.port);
+});
 module.exports = app;
