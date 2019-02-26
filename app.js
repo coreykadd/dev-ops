@@ -5,6 +5,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var path = require('path');
+var port = process.env.PORT || 3000;
 // var contacts = require('./routes/contactList.routes');
 
 // App uses
@@ -17,5 +18,5 @@ app.use(bodyParser.urlencoded({extended: true}));
 // app.use('/api', contacts);
 
 // Listens server
-app.listen(CONFIG.port);
+app.listen(port);
 module.exports = app;
