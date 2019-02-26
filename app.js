@@ -1,10 +1,21 @@
+require('./config/config'); //Init config variables
+
+// Variables
 var express = require('express');
-var port = process.env.PORT || 3000;
-var app = express(),
-path = require('path'),
+var app = express();
+var bodyParser = require('body-parser');
+var path = require('path');
+var contacts = require('./routes/contactList.routes');
+
+// App uses
 publicDir = path.join(__dirname,'public');
-
 app.use(express.static(publicDir))
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 
-app.listen(port);
+// Routes
+app.use('/api', contacts);
+
+// Listens server
+app.listen(CONFIG.port);
 module.exports = app;
