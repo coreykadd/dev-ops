@@ -1,5 +1,5 @@
 // require('./config/config'); //Init config variables
-
+require('dotenv').config(); //Init env variables
 const mysql = require('mysql');
 
 var connection = mysql.createConnection({

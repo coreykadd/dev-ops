@@ -19,6 +19,6 @@ app.use('/api', contacts);
 
 // Listens server
 app.listen(port, () => {
-    console.log('Listening to port ' + CONFIG.port);
+    console.log('Listening to port ' + port);
 });
 module.exports = app;

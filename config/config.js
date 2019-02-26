@@ -1,3 +1,5 @@
+require('dotenv').config(); //Init env variables
+
 CONFIG = {}
 
 CONFIG.port = process.env.PORT || '3000';
