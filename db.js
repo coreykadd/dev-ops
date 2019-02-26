@@ -1,13 +1,13 @@
 // require('./config/config'); //Init config variables
-require('dotenv').config(); //Init env variables
+// require('dotenv').config(); //Init env variables
 const mysql = require('mysql');
 
 var connection = mysql.createConnection({
-    host     : process.env.RDS_HOSTNAME,
-    database : process.env.RDS_DATABASE,
-    user     : process.env.RDS_USERNAME,
-    password : process.env.RDS_PASSWORD,
-    port     : process.env.RDS_PORT
+    host     : 'contactlistdb.cwwnavucu4nf.eu-west-1.rds.amazonaws.com',
+    database : 'contacts',
+    user     : 'corey',
+    password : 'Testing22',
+    port     : '3306'
   });
   
   connection.connect(function(err) {
