@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 // app.use('/api', contacts);
 
 // Listens server
-app.listen(CONFIG.port, () => {
+app.listen(port, () => {
     console.log('Listening to port ' + CONFIG.port);
 });
 module.exports = app;
