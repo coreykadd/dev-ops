@@ -5,7 +5,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var path = require('path');
-var contacts = require('./routes/contactList.routes');
+// var contacts = require('./routes/contactList.routes');
 
 // App uses
 publicDir = path.join(__dirname,'public');
