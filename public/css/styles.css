@@ -17,10 +17,12 @@ html {
 
 body {
   font-size: 1.8rem;
+  text-align: center;
 }
 
 h1, h2, h3 {
   font-weight: normal;
+  color: red;
 }
 
 h1 {
