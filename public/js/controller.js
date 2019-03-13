@@ -24,8 +24,8 @@ myApp.controller('AppCtrl',[
         //Adding a contact
         $scope.addContact = function(){
             console.log($scope.contact);
-            // if($scope.contact._id !== null)
-            //     $scope.contact._id = null;
+            if($scope.contact._id !== null)
+                $scope.contact._id = null;
 
             if($scope.contact.name == null) {
                 alert('Please enter valid name');
