@@ -15,16 +15,19 @@ describe('Tests app', function() {
     });
   });
 
-  it('Tests get command to database', function(done) {
+  it('Tests connection to database', function(done) {
     request.get('/api/contacts').expect(200).end(function(err, result) {
-      console.log(result);
       done(err);
     });
   });
 
   it('Tests headers of table is correct', function(done) {
     request.get('/').expect(200).end(function(err, result) {
-      console.log(result);
+      test.string(result.text).contains('Name');
+      test.string(result.text).contains('Email');
+      test.string(result.text).contains('Number');
+      test.string(result.text).contains('Action');
+      done(err);
     });
   });
 });
