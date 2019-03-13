@@ -16,7 +16,7 @@ var connection = mysql.createConnection({
       return;
     }
   
-    console.log('Connected to database.');
+    console.log('Successfully connected to database.');
 
     connection.query(`create table if not exists contacts(contact_id int primary key auto_increment,
                                                           name varchar(25) not null,
