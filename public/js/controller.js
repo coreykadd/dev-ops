@@ -43,6 +43,7 @@ myApp.controller('AppCtrl',[
                 alert('Contact Added');
             }
 
+            Console.log("here in addContact");
             $http.post('/api/createcontact', $scope.contact)
             .then(function(res){
                 console.log('Added contact');
