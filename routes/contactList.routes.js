@@ -35,6 +35,8 @@ router.post('/createcontact', function (req, res) {
     if (!contact) {
         return res.status(400).send({ error:true, message: 'Please provide contact' });
     }
+
+    console.log("here");
  
     db.query("INSERT INTO contacts set ?", contact, function (error, results, fields) {
         if (error) throw error;
